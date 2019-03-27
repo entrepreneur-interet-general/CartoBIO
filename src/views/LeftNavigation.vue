@@ -6,7 +6,7 @@
       <v-spacer></v-spacer>
     </v-toolbar>
     <v-list>
-      <v-list-tile v-for="item in items" :key="item.title">
+      <v-list-tile v-for="item in items" :key="item.title" :to="item.link">
         <v-list-tile-content>
           <v-list-tile-title v-text="item.title"></v-list-tile-title>
         </v-list-tile-content>
@@ -21,13 +21,12 @@ export default {
     return {
       items: [
         {
-          title: "Nav Item 1"
+          title: "Home",
+          link: "/home"
         },
         {
-          title: "Nav Item 2"
-        },
-        {
-          title: "Nav Item 3"
+          title: "Map",
+          link: "/map"
         }
       ]
     };

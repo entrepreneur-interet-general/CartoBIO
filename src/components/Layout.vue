@@ -5,7 +5,7 @@
     </v-navigation-drawer>
     <Toolbar app :drawer="drawer"></Toolbar>
     <v-content>
-      <Map></Map>
+      <router-view></router-view>
     </v-content>
     <!-- <v-footer app></v-footer> -->
   </v-app>

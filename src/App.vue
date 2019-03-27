@@ -22,8 +22,20 @@ export default {
   padding: 0;
 }
 
-// html tag have an overflow-y: scroll
+/* html tag have an overflow-y: scroll (vuetify design choice) */
 html {
   overflow-y: auto;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #a5a8b3;
 }
 </style>
