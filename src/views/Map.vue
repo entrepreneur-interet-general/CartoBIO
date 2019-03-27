@@ -71,7 +71,6 @@
           :features.sync="selectedFeatures"
           @select="displayPopup = true"
           @unselect="closePopup"
-          @click="selectParcel"
         >
           <template slot-scope="select">
             <!-- select styles -->
