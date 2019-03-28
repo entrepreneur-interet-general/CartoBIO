@@ -1,6 +1,13 @@
 <template>
   <v-layout>
-    <v-navigation-drawer right temporary v-model="editParcel.open" absolute v-if="editParcel.open">
+    <v-navigation-drawer
+      right
+      temporary
+      v-model="editParcel.open"
+      absolute
+      clipped
+      v-if="editParcel.open"
+    >
       <EditParcel :parcelData="editParcelData" :drawer="editParcel"></EditParcel>
     </v-navigation-drawer>
     <div class="map">
@@ -241,6 +248,7 @@ export default {
       feat.id = feat.id ? feat.id : uuid.v1();
     });
     this.importedFeatures = this.parcels;
+    console.log(this.parcels);
   }
 };
 

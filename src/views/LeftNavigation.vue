@@ -21,12 +21,12 @@ export default {
     return {
       items: [
         {
-          title: "Home",
+          title: "Accueil",
           link: "/"
         },
         {
-          title: "Map",
-          link: "/map"
+          title: "Carte",
+          link: "/carte"
         }
       ]
     };

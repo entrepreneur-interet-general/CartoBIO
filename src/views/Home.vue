@@ -12,7 +12,7 @@
         <v-container fluid grid-list-md>
           <v-layout row wrap>
             <v-flex v-for="operator in operators" :key="operator.id">
-              <v-card :to="'/map/' + operator.name">
+              <v-card :to="'/carte/' + operator.name">
                 <v-card-title v-html="operator.name"></v-card-title>
                 <v-card-text>
                   <v-subheader>{{operator.nbParcels}} parcelles</v-subheader>

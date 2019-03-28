@@ -69,9 +69,14 @@ export default {
     }
   },
   mounted: function() {
-    this.bio = this.parcelData.properties.BIO;
-    this.engagementDate = this.parcelData.properties.ENGAGEMENT;
-    this.dateFormatted = this.parseDate(this.engagementDate);
+    this.$nextTick(function() {
+      console.log(this.parcelData);
+      this.bio = this.parcelData.properties.BIO;
+      this.engagementDate = this.parcelData.properties.ENGAGEMENT;
+      this.dateFormatted = this.parseDate(this.engagementDate);
+      // Code that will run only after the
+      // entire view has been rendered
+    });
   },
   watch: {
     dateFormatted(val) {
@@ -80,3 +85,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.v-content[data-booted="true"] {
+  // avoid adding padding-left 300px when left drawer is opened as well
+  padding: 0 !important;
+}
+</style>

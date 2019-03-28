@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import App from './App'
 import Home from './views/Home'
 import Map from './views/Map'
 import data from "@/data.json"
@@ -14,7 +13,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/map',
+      path: '/carte',
       name: 'map',
       component: Map,
       props: {
@@ -26,7 +25,7 @@ export default new Router({
       // component: () => import( /* webpackChunkName: "map" */ './views/Map.vue')
     },
     {
-      path: '/map/:user',
+      path: '/carte/:user',
       name: 'mapuser',
       component: Map,
       props: (route) => ({
