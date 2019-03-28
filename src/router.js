@@ -9,12 +9,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [{
-      path: '/',
-      name: 'app',
-      component: App
-    },
-    {
-      path: '/home',
+      path: '',
       name: 'home',
       component: Home
     },
@@ -38,6 +33,8 @@ export default new Router({
         parcels: getUserParcels(route.params.user)
       })
     }
+
+
   ]
 })
 
