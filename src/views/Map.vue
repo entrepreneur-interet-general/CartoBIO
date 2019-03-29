@@ -111,7 +111,7 @@
         <!-- Should be in its own vue component -->
         <v-card class="map-controls">
           <v-card-title>
-            Map controls
+            Options
             <v-spacer></v-spacer>
             <v-btn flat icon @click="showControls = !showControls" class="topright">
               <v-icon>{{ showControls ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
@@ -121,7 +121,7 @@
           <v-slide-y-transition>
             <v-card-text v-show="showControls">
               <v-list two-line>
-                <v-subheader>Layers</v-subheader>
+                <v-subheader>Couches</v-subheader>
                 <v-list-tile>
                   <v-list-tile-content>
                     <v-list-tile-title v-html="'Cadastre'"></v-list-tile-title>
@@ -138,13 +138,13 @@
                   </v-list-tile-content>
                 </v-list-tile>
 
-                <v-subheader>Drawing tools</v-subheader>
+                <v-subheader>Outils de dessin</v-subheader>
                 <v-list-tile>
-                  <v-btn primary @click="startDraw" v-if="interactionType !=='Draw'">DRAW</v-btn>
+                  <v-btn primary @click="startDraw" v-if="interactionType !=='Draw'">Dessiner</v-btn>
                   <v-btn primary @click="stopInteraction" v-if="interactionType !== null">STOP</v-btn>
                 </v-list-tile>
                 <v-list-tile>
-                  <v-switch v-model="allowEdition" :label="`Edit drawn parcels`"></v-switch>
+                  <v-switch v-model="allowEdition" :label="`Modification des parcelles dessinées`"></v-switch>
                 </v-list-tile>
               </v-list>
             </v-card-text>

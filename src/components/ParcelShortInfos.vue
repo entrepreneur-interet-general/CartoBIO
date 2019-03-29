@@ -39,11 +39,11 @@
         <v-divider></v-divider>
         <v-card-actions>
           <v-btn flat color="error">
-            <v-icon size="18" class="action-icon" @click="closeCard()">delete_forever</v-icon>Delete
+            <v-icon size="18" class="action-icon" @click="closeCard()">delete_forever</v-icon>Supprimer
           </v-btn>
           <v-spacer></v-spacer>
           <v-btn flat color="primary" @click="edit(parcelData)">
-            <v-icon size="18" class="action-icon">edit</v-icon>Edit
+            <v-icon size="18" class="action-icon">edit</v-icon>Modifier
           </v-btn>
         </v-card-actions>
       </v-layout>
