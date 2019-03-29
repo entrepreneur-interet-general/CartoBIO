@@ -47,15 +47,11 @@
         </vl-layer-tile>
 
         <vl-layer-group id="layer-group" :opacity="cadastreOpacity" :visible="visible">
-          <!-- <vl-layer-tile id="osm">
-        <vl-source-osm></vl-source-osm>
-          </vl-layer-tile>-->
-
           <vl-layer-tile id="ign-cadastre">
             <vl-source-wmts
               url="https://wxs.ign.fr/choisirgeoportail/geoportail/wmts"
               layerName="CADASTRALPARCELS.PARCELS"
-              styleName="normal"
+              styleName="bdparcellaire"
               format="image/png"
               matrixSet="PM"
               attributions="IGN-F/Géoportail"
@@ -185,7 +181,7 @@ export default {
       selectedFeatures: [],
       importedFeatures: [],
       showControls: false,
-      cadastreOpacity: 0.3,
+      cadastreOpacity: 0.7,
       cadastreOpacityMem: 0,
       visible: true,
       editParcel: {
